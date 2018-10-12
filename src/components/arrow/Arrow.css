@@ -1,0 +1,96 @@
+.arrow {
+    position: relative;
+    height: 69px;
+    width: 140px;
+}
+
+.title {
+    z-index: 2;
+    font-size: 11px;
+    position: absolute;
+    top: 0;
+    margin-left: 3px;
+    font-weight: 700;
+}
+
+.amount {
+    z-index: 2;
+    font-size: 22px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 3px;
+}
+
+.amount > span:nth-child(2) {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.amount > span:nth-child(3) {
+    vertical-align: top;
+}
+
+.arrow > div:nth-child(1) {
+    z-index: 1;
+    background: white;
+    transform: scaleY(0.97) scaleX(0.985);
+}
+
+.arrow > div:nth-child(2) {
+    background:  #afafb1;;
+    border-radius: 3px;
+}
+
+.arrow > div:nth-child(1) .arrow-body, 
+.arrow > div:nth-child(1) .arrow-corner-top, 
+.arrow > div:nth-child(1) .arrow-corner-middle, 
+.arrow > div:nth-child(1) .arrow-corner-bottom {
+    background: inherit;
+    border-radius: 3px;
+}
+
+
+.arrow-wrapper {
+    position: absolute;
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+}
+
+.arrow-body, .arrow-corner-top, .arrow-corner-middle, .arrow-corner-bottom {
+    background: inherit;
+    border-radius: 3px;
+}
+
+.arrow-corner-top, .arrow-corner-middle, .arrow-corner-bottom {
+    position: absolute;
+}
+
+.arrow-body {
+    height: inherit;
+}
+
+.arrow-corner-top {
+    width: 35px;
+    height: 11px;
+    top: 9px;
+    right: -26px;
+    transform: rotate(37deg);
+}
+
+.arrow-corner-middle {
+    position: absolute;
+    right: -25px;
+    top: 19px;
+    width: 50px;
+    height: 12px;
+}
+
+.arrow-corner-bottom {
+    width: 35px;
+    height: 40px;
+    bottom: 6px;
+    right: -17px;
+    transform: rotate(-37deg);
+    clip-path: polygon(0 0, 69% 0, 100% 100%, 0 100%);
+}

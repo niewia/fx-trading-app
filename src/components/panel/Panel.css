@@ -1,0 +1,74 @@
+.panel {
+    width: 280px;
+    border: 2px solid #c3c0c0;
+    margin: 20px;
+    background: whitesmoke;
+}
+
+.header {
+    background-color: #575757;
+    background-image: linear-gradient(#888383, #575757);
+    color: white;
+    font-weight: 700;
+    height: 23px;
+}
+
+.arrows-wrapper {
+    display: grid;
+    grid-template-columns: 140px 0 140px;
+    position: relative;
+}
+
+.arrows-wrapper > div:nth-child(1) {
+    color: #d20a11;
+}
+
+.arrows-wrapper > div:nth-child(1):hover,
+.arrows-wrapper > div:nth-child(3):hover {
+    color: white;
+}
+
+.arrows-wrapper > div:nth-child(1):hover .arrow-wrapper:nth-child(1) {
+    background: #d20a11;
+}
+.arrows-wrapper > div:nth-child(1):hover .arrow-wrapper:nth-child(2) {
+    background: #67b4ea;
+    transform: scaleY(1.09) scaleX(1.04);
+}
+
+.arrows-wrapper > div:nth-child(3):hover .arrow-wrapper:nth-child(1) {
+    background: #7bdc12;
+}
+.arrows-wrapper > div:nth-child(3):hover .arrow-wrapper:nth-child(2) {
+    background: #67b4ea;
+    transform: scaleY(1.09) scaleX(1.04);
+}
+.arrows-wrapper > div:nth-child(3) {
+    transform: scaleX(-1);
+    color: #639e23;
+}
+
+.arrows-wrapper > div:nth-child(3) .title, .arrows-wrapper > div:nth-child(3) .amount {
+    transform: scaleX(-1);
+}
+
+.indicator-red {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: #d20a11;
+    left: calc(50% - 5px);
+    top: 6px;
+}
+
+.indicator-green {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background: #639e23;
+    left: calc(50% - 5px);
+    top: 6px;
+    transform: scaleY(-1)
+}
