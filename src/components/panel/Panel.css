@@ -3,6 +3,7 @@
     border: 2px solid #c3c0c0;
     margin: 20px;
     background: whitesmoke;
+    box-shadow: 3px 4px 8px 0px #80808073;
 }
 
 .header {
@@ -17,6 +18,7 @@
     display: grid;
     grid-template-columns: 140px 0 140px;
     position: relative;
+    padding-bottom: 30px;
 }
 
 .arrows-wrapper > div:nth-child(1) {

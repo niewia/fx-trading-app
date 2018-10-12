@@ -12,16 +12,18 @@ class App extends Component {
     }
   }
 
+  adjustPrice(price) {
+    let sign = Math.random() < 0.5 ? -1 : 1;
+    return price + (price * (Math.random() * 0.1 * sign));
+  }
+
   componentDidMount() {
     setInterval(() => {
       const newData = this.state.data.map(item => {
-        let sign = Math.random() < 0.5 ? -1 : 1;
-        item.buy = item.buy + (item.buy * (Math.random() * 0.1 * sign));
-        sign = Math.random() < 0.5 ? -1 : 1;
-        item.sell = item.sell + (item.sell * (Math.random() * 0.1 * sign))
+        item.buy = this.adjustPrice(item.buy);
+        item.sell = this.adjustPrice(item.sell);
         return item;
       })
-      console.log(newData);
       this.setState({ data: newData });
     }, 1000)
     this.setState({ data: DataProvider.getData() });

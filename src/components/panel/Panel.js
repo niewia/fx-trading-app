@@ -24,7 +24,6 @@ export default class Panel extends Component {
     }
 
     render() {
-        console.log(this.state.indicator)
         const currency = this.props.pair.split(" ")[0];
         return (
             <div className='panel'>
